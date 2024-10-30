@@ -13,19 +13,17 @@ ASFLAGS=
 
 CC=		cc -c -m32
 CFLAGS=		-g\
-		-O\
+		-O0\
 		-Wno-deprecated-declarations -Wuninitialized -Wunused -Wreturn-type -Wimplicit\
 		-I$ROOT/FreeBSD/386/include\
 		-I$ROOT/include\
 		-I/usr/local/include\
- 		-I/usr/X11R6/include\
+ 		-I/usr/local/include/X11\
 		-DFREEBSD_386
 
 ANSICPP=
 LD=		cc -m32
-LDFLAGS=	-L/usr/openwin/lib\
-		-L/usr/local/lib\
-		-L/usr/X11R6/lib\
+LDFLAGS=	-L/usr/local/lib\
 
 SYSLIBS=
 
