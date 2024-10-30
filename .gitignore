@@ -69,6 +69,7 @@ y.debug
 /[A-Z]*/*/bin/asm
 /[A-Z]*/*/bin/data2s
 /[A-Z]*/*/bin/emu
+/[A-Z]*/*/bin/iyacc
 /[A-Z]*/*/bin/limbo
 
 /Nt/*/bin/?[acl].exe
