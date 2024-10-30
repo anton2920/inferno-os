@@ -27,7 +27,7 @@ getfcr(void)
 			"popl	%%eax\n\t"
 			"xorb	$0x3f, %%al\n\t"
 			: "=a"  (fcr)
-			: "eax"	(fcr)
+			: "a"	(fcr)
 	);
 	return fcr; 
 }
@@ -42,7 +42,7 @@ getfsr(void)
 			"movl	(%%eax), %%eax\n\t"
 			"andl	$0xffff, %%eax\n\t"
 			: "=a"  (fsr)
-			: "eax" (&fsr)
+			: "a" (&fsr)
 	);
 	return fsr;
 }
