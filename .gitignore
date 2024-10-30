@@ -54,8 +54,9 @@ y.debug
 # initial mk from makemk.sh
 /utils/mk/mk
 
-# no binaries are committed for any of the netbsd ports
+# no binaries are committed for any of the (free|net)bsd ports
 # can be deleted if wildcard from the comment below is enabled
+/FreeBSD/*/bin/
 /NetBSD/*/bin/
 
 # preserve the patterns from .hgignore, though perhaps all binaries
@@ -67,12 +68,9 @@ y.debug
 /[A-Z]*/*/bin/5cv
 /[A-Z]*/*/bin/acid
 /[A-Z]*/*/bin/asm
-/[A-Z]*/*/bin/data2c
 /[A-Z]*/*/bin/data2s
 /[A-Z]*/*/bin/emu
-/[A-Z]*/*/bin/iyacc
 /[A-Z]*/*/bin/limbo
-/[A-Z]*/*/bin/ndate
 
 /Nt/*/bin/?[acl].exe
 /Nt/*/bin/5coff.exe
