@@ -22,9 +22,15 @@ CFLAGS=		-g\
 		-I/usr/local/include/freetype2\
 		-DFREEBSD_386
 
+# NOTE(anton2920): for FreeBSD/amd64 jail is used as source for 32-bit libraries. Its precedence should be higher.
+JAIL=/usr/local/jails/containers/inferno
+
 ANSICPP=
 LD=		cc -m32
-LDFLAGS=	-L/usr/local/lib\
+LDFLAGS=	-static\
+		-Wl,--allow-multiple-definition\
+		-L$JAIL/usr/local/lib\
+		-L/usr/local/lib\
 
 SYSLIBS=
 
