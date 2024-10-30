@@ -1,5 +1,6 @@
 #include "lib9.h"
 #include "mathi.h"
+#include "fpuctl.h"
 
 void
 FPinit(void)
