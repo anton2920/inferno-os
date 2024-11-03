@@ -12,6 +12,9 @@ vc*.pdb
 y.output
 y.tab.[ch]
 y.debug
+*.a
+emu/*/*.root.[ch]
+emu/*/errstr.h
 
 /contrib/
 /grid/
