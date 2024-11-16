@@ -22,6 +22,8 @@
 #include	<sys/syscall.h>
 #define	getpid()	syscall(SYS_getpid)
 
+void (*coherence)(void) = nofence;
+
 enum
 {
 	DELETE	= 0x7f,

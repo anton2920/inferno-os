@@ -218,7 +218,7 @@ osyield(void)
 {
 //	pthread_yield_np();
 	/* define pthread_yield to be sched_yield or pthread_yield_np if required */
-	pthread_yield();
+	sched_yield();
 }
 
 void

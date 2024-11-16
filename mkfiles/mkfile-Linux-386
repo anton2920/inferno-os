@@ -15,15 +15,16 @@ CC=		cc -c -m32
 CFLAGS=		-g\
 		-O\
 		-fno-strict-aliasing\
-		-fno-aggressive-loop-optimizations\
 		-Wuninitialized -Wunused-variable -Wreturn-type -Wimplicit\
 		-I$ROOT/Linux/386/include\
 		-I$ROOT/include\
+		-I/usr/include/x86_64-linux-gnu/\
 		-DLINUX_386
 
 ANSICPP=
 LD=		cc -m32
-LDFLAGS=
+LDFLAGS=	-Wl,--allow-multiple-definition\
+		-L/usr/lib/gcc/i686-linux-gnu/12/
 
 SYSLIBS=
 
